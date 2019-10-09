@@ -2,9 +2,10 @@
 
 # Nombre de table :6
 
+
 ### compagnie
 
-- **id INT PRIMARY KEY AUTOINCREMENT,
+- id INT PRIMARY KEY AUTOINCREMENT,
 - nom_compagnie VARCHAR,
 - addresse VARCHAR,
 - email VARCHAR,
@@ -13,9 +14,8 @@
 
 ### commune
 
-- **id INT PRIMARY KEY AUTOINCREMENT,
+- id INT PRIMARY KEY AUTOINCREMENT,
  - nom VARCHAR,
-
 
 ## events
 
@@ -49,14 +49,14 @@
 ## categorie_event
 
 - id INT PRIMARY KEY AUTOINCREMENT,
- - nom VARCHAR,
+- nom VARCHAR,
 
  
  ## participants
  
- - id INT PRIMARY KEY AUTOINCREMENT,
- - id_user FOREIGN KEY REFERENCES users(id),
- - id_event FOREIGN KEY REFERENCES events(id)
+- id INT PRIMARY KEY AUTOINCREMENT,
+- id_user FOREIGN KEY REFERENCES users(id),
+- id_event FOREIGN KEY REFERENCES events(id)
  
 
 
