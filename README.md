@@ -4,7 +4,7 @@
 
 ### compagnie
 
-### - id INT PRIMARY KEY AUTOINCREMENT,
+- **id INT PRIMARY KEY AUTOINCREMENT,
 - nom_compagnie VARCHAR,
 - addresse VARCHAR,
 - email VARCHAR,
@@ -12,12 +12,14 @@
 - password VARCHAR,
 
 ### commune
-### - id INT PRIMARY KEY AUTOINCREMENT,
+
+- **id INT PRIMARY KEY AUTOINCREMENT,
  - nom VARCHAR,
 
 
 ## events
-### - id INT PRIMARY KEY AUTOINCREMENT,
+
+- id INT PRIMARY KEY AUTOINCREMENT,
 - nom_event VARCHAR,
 - date_debut DATE,
 - date_fin DATE,
@@ -28,12 +30,14 @@
 - lieu VARCHAR
 
 ## commune_event
-### - id INT PRIMARY KEY AUTOINCREMENT,
+
+- id INT PRIMARY KEY AUTOINCREMENT,
 - id_event INT FOREIGN KEY REFERENCES event(id),
 - id_commune INT FOREIGN KEY REFERENCES commune(id),
 
 ## users
-### - id INT PRIMARY KEY AUTOINCREMENT,
+
+- id INT PRIMARY KEY AUTOINCREMENT,
 - id_commune FOREIGN KEY REFERENCES commune(id)
 - nom VARCHAR,
 - prenom VARCHAR,
@@ -43,12 +47,14 @@
 
 
 ## categorie_event
-### - id INT PRIMARY KEY AUTOINCREMENT,
+
+- id INT PRIMARY KEY AUTOINCREMENT,
  - nom VARCHAR,
 
  
  ## participants
- ### - id INT PRIMARY KEY AUTOINCREMENT,
+ 
+ - id INT PRIMARY KEY AUTOINCREMENT,
  - id_user FOREIGN KEY REFERENCES users(id),
  - id_event FOREIGN KEY REFERENCES events(id)
  
